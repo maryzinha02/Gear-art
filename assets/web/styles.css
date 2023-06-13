@@ -1,0 +1,129 @@
+body {
+    background-color: rgb(230, 229, 229);
+}
+#logo {
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logo img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+}
+
+#logo h1 {
+
+    font-size: 40px;
+    color: #ff1c1c;
+    font-family: 'Courier New';
+}
+ #dLoginLogour {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        width: 100%;
+    }
+
+    #loginLogout {
+        background-color: #ffa500;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+    }
+
+    #loginLogout a {
+        text-decoration: none;
+        color: #fff;
+    }
+    .abas{
+        display: flex;
+        justify-content: flex-end;
+        height: 40px;
+        border-bottom: 1px solid rgb(216, 216, 216);
+        /*background-image: url('img/bg1.jpg');*/
+        
+    }
+    .abas button {
+        border:none;
+        height: 100%; 
+        text-align: center;
+        font-size: 22px;
+        background-color: rgba(255, 255, 255);
+        border-left: 2px solid orange;
+        color: #000000;
+    }
+    .abas button:hover{
+        
+        color: orange;
+    }
+    .abas button:active{
+        background-color: rgb(78, 46, 3);
+        color: orange;
+        transition: all .5s;
+    }
+    .abas .ativa{
+        background-color: rgb(231, 103, 52);
+        color: orange;
+        transition: all .5s;
+    }
+    /*  */
+    .catalogo {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+        grid-gap: 20px;
+       
+    
+        padding: 20px 20px;
+    }
+    .catalogo .produtos {
+        background-color: rgb(255, 227, 103);
+        text-align: center;
+        width: 200px;
+        height: 300px;
+       
+        border-radius: 5px;
+    
+        padding: 50px ;
+    }
+     .catalogo .produtos:hover{
+        width: 198px;
+        height: 308px;
+        border: 3px solid rgb(247, 144, 8)
+    }
+
+    .produtos:hover h2{
+        font-family: 'Courier New';
+        font-size: 31px;
+
+    }
+
+    .produtos:hover button{
+        border: 1px solid rgb(0, 0, 0)
+    }
+    
+    .produtos h2{
+        padding-top: 9px;
+        font-size: 30px;
+        font-family: 'Courier New';
+        color: rgb(36, 6, 1);
+    }
+    .produtos h4{
+        font-size: 18px;
+        font-family: 'Courier New';
+        color: rgb(36, 6, 1);
+    }
+   
+    .produtos button {
+        border: none;
+        border-radius: 20px;
+        height: 40px;
+        width: 100%;
+    
+        background-color: rgb(39, 39, 39);
+        color: white;
+        font-size: 25px;
+    }
