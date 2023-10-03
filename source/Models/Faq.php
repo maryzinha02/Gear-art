@@ -14,7 +14,6 @@ class Faq
     {
         $stm = Connect::getInstance()->query("SELECT * FROM faqs");
         return $stm->fetchAll();
-
         
     }
     

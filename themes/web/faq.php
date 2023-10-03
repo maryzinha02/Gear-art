@@ -6,14 +6,32 @@
 
 ?>
 
-<?php
+<h2>Olá, FAQS</h2>
 
-if(!empty($faqs)){
-        foreach ($faqs as $faq){
-            var_dump($faq);
+<button>Faqs</button>
 
-              //echo "<div><span>{$faq}<span/><div/>"
-        }
+<script type="module" async>
 
-}
+const button = document.querySelector("button");
 
+    const url = "<?php echo url("/api/faqs"); ?>";
+
+    const options = {
+        method: "GET"
+    };
+
+    button.addEventListener("click", async () => {
+        const faqs = await request(url, options);
+        //console.log(faqs);
+        faqs.forEach((faq) => {
+            document.querySelector("#divFaqs").insertAdjacentHTML("beforeend", `<p>${faq.question} ${faq.answer}</p>`);
+        });
+    });
+
+    const getFaqs = async () => {
+        const response = await fetch(url);
+        const faqs = await response.json();
+        //console.log(faqs);
+    };
+    getFaqs();
+</script>

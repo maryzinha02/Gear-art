@@ -3,63 +3,79 @@
 namespace Source\App;
 
 use League\Plates\Engine;
+use Source\Models\Author;
 use Source\Models\User;
 use Source\Models\Faq;
-use Source\Models\Arts;
+use Source\Models\Art;
 
 class Web
 {
 
     private $view;
+    private $authors;
 
     public function __construct()
     {
         $this->view = new Engine(__DIR__ . "/../../themes/web","php");
+        $authors = new Author();
+        $this->authors = $authors->selectAll();
+        
     }
-
-
 
     public function home()
     {
-        echo $this->view->render("home",[]);
+        echo $this->view->render("home",[
+        ]);
     }
 
-    public function register()
+    public function register(array $data)
     {
-        //$user = new User("Fernando","fernando@gmail.com","987654");
-        //var_dump($user);
-        //$user->insert();
-        //$users = $user->selectAll();
-        //var_dump($users);
-
-        // "users" => $user->selectAll()
+        if(!empty($data)){
+            
+            $response = json_encode($data);
+            echo $response;
+            return;
+        }
 
         echo $this->view->render("register",[]);
     }
 
     public function about()
     {
-        echo $this->view->render("about",[]);
-    }
-
-
-    public function arts () {
-
-        //echo $this->view->render("arts",[]);
-
-        $arts = new Arts();
-
-        //var_dump($arts->selectAll());
-
-        echo $this->view->render("arts", [
-            "arts" => $arts->selectAll()
+        echo $this->view->render("about",[
         ]);
-        
     }
 
-    public function contact () {
+    public function login ()
+    {
+        echo $this->view->render("login",[]);
+    }
 
-        echo $this->view->render("contact",[]);
+
+    public function art (array $data) : void {
+
+        $arts = new Art();
+
+        if(!empty($data["author"])){
+            
+            echo $this->view->render("art", [
+                "art" => $arts->selectByAuthor($data["author"]),
+                "authors" => $this->authors
+            ]);
+            return;
+        }
+
+
+        echo $this->view->render("art", [
+            "art" => $arts->selectAll(),
+            "authors" => $this->authors
+        ]);
+    }
+
+    public function shopCart () {
+
+        echo $this->view->render("shopCart",[
+        ]);
     }
 
     public function faq ()
@@ -68,27 +84,29 @@ class Web
         //$faqs->selectAll();
 
         echo $this->view->render("faq", [
-            "faqs" => $faqs->selectAll()
+            "faqs" => $faqs->selectAll(),   
         ]);
     }
 
-    public function account()
+    public function favorite()
     {
-        echo $this->view->render("account",[]);
+        echo $this->view->render("favorite",[
+        ]);
     }
-
-    public function artists()
-    {
-        echo $this->view->render("artists",[]);
-    }
-
 
     public function error (array $data) : void
     {
         var_dump($data);
     }
 
+    public function apiFaqs()
+    {
+        echo $this->view->render("api-faqs",[
+        ]);
+    }
+
 }
+
 
 
 /*public function location()

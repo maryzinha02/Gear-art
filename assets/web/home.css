@@ -1,0 +1,715 @@
+body {
+    background-color: rgb(219, 219, 219);
+}
+
+#logo {
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: 30px;
+    justify-content: 30px;
+
+    height: 230px;
+}
+
+#logo img {
+    padding: 1px;
+    width: 290px;
+    height: 290px;
+    margin-right: 1px;
+
+    position: absolute;
+    top: -23px;
+   
+}
+
+#fotoPerfil {
+    position: absolute;
+    top: 22px;
+    right: 142px;
+    width: 55px;
+    height: 55px; 
+
+    cursor: pointer;
+}
+
+#fotoPerfil img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+#shopCart {
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    width: 90px;
+    height: 90px; 
+
+    cursor: pointer;
+}
+
+#shopCart img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+#shopCart img:hover{
+    transform: scale(1.2);
+}
+
+#heart{
+    position: absolute;
+    top: 0px;
+    right: 60px;
+    width: 100px;
+    height: 100px;
+
+    cursor: pointer;
+}
+
+#heart img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease;
+}
+
+#heart img:hover{
+    transform: scale(1.2);
+}
+
+#seNLogado {
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'Courier New';
+
+    color: rgb(194, 28, 28);
+
+    position: absolute;
+    top: 80px;
+    left: 500px;
+}
+
+a {
+    color: inherit; 
+    text-decoration: none;
+}
+
+#mercha {
+    position: absolute;
+    top: 32px;
+    right: 205px;
+    width: 100px;
+    height: 90px;
+    
+}
+
+.mercha {
+    padding-top: 9px;
+    font-size: 16px;
+    text-decoration: underline;
+    color: rgb(179, 41, 17);
+
+    cursor: pointer;
+
+}
+
+#mercha .mercha {
+    padding-top: 9px;
+    font-size: 20px;
+    text-decoration: underline;
+    color: rgb(179, 41, 17);
+
+    cursor: pointer;
+}
+    .abas{
+        display: flex;
+        justify-content: flex-end;
+        height: 40px;
+        border-bottom: 1px solid rgb(216, 216, 216);
+        
+    }
+    .abas button {
+        border:none;
+        height: 100%; 
+        text-align: center;
+        font-size: 22px;
+        background-color: rgba(255, 255, 255);
+        border-left: 2px solid orange;
+        color: #000000;
+
+        cursor: pointer;
+    }
+    .abas button:hover{
+        
+        color: orange;
+    }
+    .abas button:active{
+        background-color: rgb(246, 227, 160);
+        color: rgb(0, 0, 0);
+        transition: all .5s;
+    }
+    .abas .ativa{
+        background-color: rgb(203, 247, 178);
+        color: rgb(0, 0, 0);
+        transition: all .5s;
+    }
+/* Aqui é o catalogo */
+  
+    .catalogo {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+        grid-gap: 20px;
+       
+    
+        padding: 20px 20px;
+    }
+        .catalogo .produtos {
+            background-color: rgb(255, 227, 103);
+            text-align: center;
+            width: 200px;
+            height: 350px;
+        
+            border-radius: 5px;
+        
+            padding: 50px ;
+        }
+        .catalogo .produtos:hover{
+            width: 198px;
+            height: 358px;
+            border: 2px solid rgb(121, 188, 85)
+            
+        }
+        .produtos h1 {
+            font-size: 20px;
+            font-family: 'bold';
+            font-weight: bold;
+            
+            padding: 2px;
+            color: rgb(194, 11, 11);
+        }
+        .produtos h2{
+            padding-top: 9px;
+            font-size: 30px;
+            font-family: 'Courier New';
+            color: rgb(36, 6, 1);
+        }
+        .produtos h4{
+            font-size: 18px;
+            font-family: 'Courier New';
+            color: rgb(36, 6, 1);
+        }
+
+        .produtos .btnAddChart{
+            background-color: rgb(234, 116, 48);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .produtos .btnFavoritar{
+            background-color: rgb(231, 30, 30);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btnsAutors {
+            background-color: rgb(106, 204, 111);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+       
+        .hidden {
+            display: none;
+        }
+
+
+    /*Daqui pra baixo é pro cadastro/login*/
+    #configSec .container {
+        margin: 15px 40px;
+        background-color: #ffffff;
+        width: 950px;
+        height: 350px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.3);
+
+    }
+
+    #configSec .abas2 {
+        display: flex;
+    }
+    
+    #configSec .abas2 button {
+        background-color: rgb(248, 103, 19);
+        border: 2px solid rgb(223, 0, 0);
+
+        color: #ffffff;
+        cursor: pointer;
+        border-radius: 10px;
+        flex-grow: 1;
+        font-size: 1.25rem;
+        font-weight: bold;
+        outline: none;
+        padding: 10px;
+        text-transform: uppercase;
+        transition: all .5s;
+    }
+    
+    #configSec .conteudo {
+        color: #ffffff;
+        padding: 20px;
+    }
+
+    .conteudo .NcdAinda {
+        padding-left: 9px;
+        font-size: 18px;
+        text-decoration: underline;
+        color: rgb(179, 41, 17);
+    
+        cursor: pointer;
+    }
+
+    .conteudo .Jtconta {
+        padding-left: 9px;
+        font-size: 18px;
+        text-decoration: underline;
+        color: rgb(179, 41, 17);
+    
+        cursor: pointer;
+    }
+    
+    #configSec .form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    #configSec .form input {
+        padding: 5px;
+        margin: 3px;
+        border: 1px solid rgb(90, 90, 90);
+    }
+    
+    #configSec .form button {
+        padding: 8px;
+        margin: 15px 10px;
+        background-color: rgb(248, 142, 61);
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        color: white;
+        font-weight: bold;
+    }
+    
+    #configSec .abas2 .ativa {
+        background-color: rgb(225, 97, 23);
+        border: 2px solid rgb(212, 38, 8);
+        padding: 8px;
+    }
+
+    .fraca {
+        color: rgb(251, 28, 28);
+    }
+    .media {
+        color: orange;
+    }
+    .forte {
+        color: green;
+    }
+
+    #aut-simple {
+        padding-top: 9px;
+        font-size: 20px;
+        font-family: 'Courier New';
+        color: rgb(36, 6, 1);
+
+    }
+
+    .seuEmail {
+        padding-top: 9px;
+        font-size: 20px;
+        font-family: 'Courier New';
+        font-weight: bold;
+
+        color: rgb(36, 6, 1);
+
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, 600%);
+        text-align: center;
+
+    }
+
+    #aut-simple2 {
+        padding-top: 9px;
+        font-size: 20px;
+        font-family: 'Courier New';
+        color: rgb(36, 6, 1);
+
+    }
+
+/*Carrinho de compras*/
+#carrinhoCompras .container {
+    margin: 15px 40px;
+    background-color: #ffffff;
+    width: 950px;
+    height: 800px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.container #tittle {
+    padding: 10px;
+    font-size: 26px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(255, 142, 12);
+
+}
+
+.container .abaCarinho {
+    padding: 9px;
+    font-size: 15px;
+    font-weight: bold;
+
+    color: rgb(39, 8, 1);
+}
+
+.container #precoTotal {
+    padding: 9px;
+    font-size: 20px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(39, 8, 1);
+    
+    position: absolute;
+    top: 310px;
+    left: 720px;
+
+}
+
+.container .removeItem {
+    background-color: rgb(255, 41, 41);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.container #comprarItem {
+    background-color: rgb(83, 187, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 380px;
+    left: 750px;
+
+}
+
+.cart-items img {
+    padding-left: 10px;
+    
+}
+
+.cart-items h2 {
+    padding-left: 10px;
+    font-size: 15px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(36, 0, 0);
+
+}
+
+.cart-items h1 {
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(36, 0, 0);
+
+}
+
+.cart-items #removerItem {
+    background-color: rgb(255, 89, 0);
+    color: white;
+    padding: 10;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+/*Favoritos*/
+
+#favoritos .container {
+    margin: 15px 40px;
+    background-color: #ffffff;
+    width: 1250px;
+    height: 1000px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), -2px -2px 4px rgba(255, 255, 255, 0.3);
+}
+
+#favoritos .container #tittle {
+    padding: 10px;
+    font-size: 26px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(255, 12, 12);
+
+}
+
+#itensFavoritos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px , 1fr));
+    grid-gap: 20px;
+   
+
+    padding: 20px 20px;
+}
+
+#itensFavoritos .produtos {
+    background-color: rgb(255, 227, 103);
+    text-align: center;
+    width: 200px;
+    height: 300px;
+
+    border-radius: 5px;
+
+    padding: 50px ;
+}
+#itensFavoritos .produtos:hover{
+    padding: 50px ;
+    width: 200px;
+    height: 300px;
+    border: 2px solid rgb(121, 188, 85)
+    
+}
+
+/*Sua Conta*/
+#suaConta .container {
+    margin: 15px 200px;
+    background-color: rgb(248, 233, 151);
+
+}
+
+#suaConta .conteudoCc {
+    border: 1px solid rgb(188, 122, 0);
+    min-height: 500px;
+    padding: 20px;
+}
+
+.conteudoCc #imgPerfil{
+    position: absolute;
+    top: 430px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#seuNome .nomeCss{
+    padding: 10px;
+    font-size: 50px;
+    font-family: 'Courier New';
+
+    color: rgb(36, 0, 0);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 330%);
+    text-align: center;
+}
+
+#seuEmail .emailCss{
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Courier New';
+
+    color: rgb(36, 0, 0);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 600%);
+    text-align: center;
+}
+
+#voltar {
+    background-color: rgb(132, 209, 81);
+    color: white;
+    padding: 80;
+    border-radius: 50px;
+    border: none;
+    width: 180px;
+    height: 30px;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 720px;
+    left: 560px;
+}
+
+#logout {
+    background-color: rgb(255, 25, 0);
+    color: white;
+    padding: 80;
+    border-radius: 50px;
+    border: none;
+    width: 208px;
+    height: 30px;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 780px;
+    left: 550px;
+}
+
+#controleDdados {
+    background-color: rgb(255, 25, 0);
+    color: white;
+    padding: 80;
+    border-radius: 30px;
+    border: none;
+    width: 130px;
+    height: 30px;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 730px;
+    left: 590px;
+}
+
+
+/*homepage*/
+
+#bemVindo {
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Courier New';
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+    color: rgb(255, 128, 55);
+}
+
+#textHome {
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: rgb(43, 14, 2);
+}
+
+#portaFoto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px
+}
+
+#portaFoto #imgHome {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+#textHome2 {
+    padding: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    color: rgb(43, 14, 2);
+}
+
+ /*Pinturas a mais*/
+
+ #cadPinturasSec .container{
+    margin: 15px 200px;
+    background-color: rgb(248, 233, 151);
+
+}
+
+.container .cadConteudo {
+    border: 1px solid rgb(188, 122, 0);
+    min-height: 500px;
+    padding: 20px;
+}
+
+#titCadProd  h2{
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(163, 11, 11);
+}
+
+#cadastrarProd .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#cadastrarProd .form input {
+    padding: 5px;
+    margin: 3px;
+    border: 1px solid rgb(194, 11, 11);
+}
+
+#cadastrarProd .form button {
+    padding: 8px;
+    margin: 15px 10px;
+    background-color: rgb(248, 142, 61);
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    font-weight: bold;
+}
+
+#cadProdOk {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'Courier New';
+    font-weight: bold;
+
+    color: rgb(163, 11, 11);
+}

@@ -20,6 +20,10 @@ class ComposerStaticInit7821057056255e3389da52dd11e6a388
         array (
             'League\\Plates\\' => 14,
         ),
+        'F' => 
+        array (
+            'Firebase\\JWT\\' => 13,
+        ),
         'C' => 
         array (
             'CoffeeCode\\Router\\' => 18,
@@ -34,6 +38,10 @@ class ComposerStaticInit7821057056255e3389da52dd11e6a388
         'League\\Plates\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
+        'Firebase\\JWT\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/firebase/php-jwt/src',
         ),
         'CoffeeCode\\Router\\' => 
         array (
